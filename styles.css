@@ -1,0 +1,611 @@
+:root {
+  --honda-red: #e40521;
+  --honda-red-dark: #b80016;
+  --whatsapp: #16a34a;
+  --text: #111111;
+  --muted: #555555;
+  --line: #e8e8e8;
+  --soft: #f5f5f5;
+  --white: #ffffff;
+  --shadow: 0 18px 48px rgba(17, 17, 17, 0.1);
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--white);
+  color: var(--text);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+main {
+  min-height: 100vh;
+  overflow-x: clip;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(18px, 4vw, 56px);
+  min-height: 86px;
+  padding: 12px clamp(18px, 4vw, 64px);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.96);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: blur(14px);
+}
+
+.topbar img {
+  height: auto;
+  object-fit: contain;
+}
+
+.logo-link {
+  display: inline-flex;
+}
+
+.logo-link img {
+  width: clamp(96px, 12vw, 150px);
+}
+
+.convem-logo {
+  width: clamp(58px, 7vw, 82px);
+  border-radius: 14px;
+}
+
+.honda-mark {
+  color: var(--honda-red);
+  font-size: clamp(1.1rem, 2vw, 1.65rem);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.06fr) minmax(350px, 0.94fr);
+  grid-template-areas:
+    "copy form"
+    "media form";
+  gap: clamp(20px, 3vw, 44px);
+  align-items: center;
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 44px) 0 30px;
+}
+
+.hero-copy {
+  grid-area: copy;
+  animation-delay: 80ms;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: var(--honda-red);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 690px;
+  margin-bottom: 16px;
+  font-size: clamp(2.1rem, 4.5vw, 4.45rem);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: 0;
+}
+
+.subheadline {
+  max-width: 640px;
+  margin-bottom: 20px;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.4vw, 1.14rem);
+  line-height: 1.55;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.benefit-card {
+  display: flex;
+  min-height: 70px;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--white);
+  padding: 13px 14px;
+  color: #1f1f1f;
+  font-size: 0.91rem;
+  font-weight: 800;
+  line-height: 1.25;
+  box-shadow: 0 10px 28px rgba(17, 17, 17, 0.06);
+}
+
+.benefit-card strong,
+.trust-list strong,
+.success-icon {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: #e9f8ee;
+  color: #138a3d;
+}
+
+.benefit-card strong {
+  width: 24px;
+  height: 24px;
+}
+
+.hero-media {
+  grid-area: media;
+  align-self: stretch;
+  min-height: 245px;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  min-height: 245px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.form-panel {
+  grid-area: form;
+  align-self: stretch;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--white);
+  padding: clamp(18px, 2.6vw, 28px);
+  box-shadow: var(--shadow);
+}
+
+form {
+  display: grid;
+  gap: 13px;
+}
+
+form h2,
+.success-box h2 {
+  margin-bottom: 2px;
+  font-size: clamp(1.32rem, 2vw, 1.7rem);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+label,
+fieldset {
+  min-width: 0;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  color: #292929;
+  font-size: 0.87rem;
+  font-weight: 800;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid #d7d7d7;
+  border-radius: 12px;
+  background: var(--white);
+  color: var(--text);
+  padding: 0 14px;
+  outline: none;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--honda-red);
+  box-shadow: 0 0 0 4px rgba(228, 5, 33, 0.12);
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 112px;
+  gap: 12px;
+}
+
+fieldset {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+legend {
+  margin-bottom: 8px;
+  color: #292929;
+  font-size: 0.87rem;
+  font-weight: 800;
+}
+
+.choice-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.choice {
+  position: relative;
+}
+
+.choice input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.choice span {
+  display: grid;
+  min-height: 46px;
+  place-items: center;
+  border: 1px solid #d7d7d7;
+  border-radius: 12px;
+  background: #fafafa;
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    color 160ms ease;
+}
+
+.choice input:checked + span {
+  border-color: var(--honda-red);
+  background: var(--honda-red);
+  color: var(--white);
+}
+
+.form-error {
+  margin: 0;
+  border-radius: 12px;
+  background: #fff1f2;
+  color: #a90014;
+  padding: 10px 12px;
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+button,
+.whatsapp-button {
+  display: inline-flex;
+  min-height: 54px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 14px;
+  padding: 0 22px;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 900;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    filter 160ms ease,
+    box-shadow 160ms ease;
+}
+
+button {
+  background: var(--honda-red);
+  box-shadow: 0 14px 30px rgba(228, 5, 33, 0.24);
+}
+
+button:hover,
+.whatsapp-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(0.97);
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.75;
+}
+
+.success-box {
+  display: grid;
+  gap: 14px;
+  text-align: center;
+}
+
+.success-box[hidden],
+.form-error[hidden] {
+  display: none;
+}
+
+.success-box p {
+  margin-bottom: 4px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.success-icon {
+  width: 46px;
+  height: 46px;
+  justify-self: center;
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.whatsapp-button {
+  width: 100%;
+  background: var(--whatsapp);
+  box-shadow: 0 14px 30px rgba(22, 163, 74, 0.2);
+}
+
+.trust-card {
+  margin-top: 16px;
+  border-radius: var(--radius);
+  background: var(--soft);
+  padding: 16px;
+}
+
+.trust-card h3 {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.trust-list {
+  display: grid;
+  gap: 9px;
+}
+
+.trust-list span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333333;
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.trust-list strong {
+  width: 21px;
+  height: 21px;
+  font-size: 0.78rem;
+}
+
+.participants {
+  display: grid;
+  grid-template-columns: 0.72fr 1fr;
+  gap: 26px;
+  align-items: center;
+  width: min(1180px, calc(100% - 40px));
+  margin: 18px auto 0;
+  border-top: 1px solid var(--line);
+  padding: 44px 0;
+}
+
+.participants h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.participants ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.participants li {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--white);
+  padding: 15px 16px;
+  color: #2e2e2e;
+  font-weight: 800;
+  box-shadow: 0 8px 22px rgba(17, 17, 17, 0.05);
+}
+
+.participants li::before {
+  content: "•";
+  margin-right: 8px;
+  color: var(--honda-red);
+  font-weight: 900;
+}
+
+.urgency {
+  background: var(--honda-red);
+  color: var(--white);
+  padding: 18px 20px;
+  text-align: center;
+  font-size: clamp(0.98rem, 1.3vw, 1.12rem);
+  font-weight: 900;
+}
+
+footer {
+  display: grid;
+  place-items: center;
+  gap: 12px;
+  padding: 30px 20px 34px;
+  background: #111111;
+  color: rgba(255, 255, 255, 0.76);
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.footer-logos img {
+  width: auto;
+  max-height: 54px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.footer-honda {
+  color: var(--white);
+  font-size: 1.25rem;
+}
+
+.reveal {
+  animation: fade-up 520ms ease both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1040px) {
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "media"
+      "copy"
+      "form";
+    width: min(720px, calc(100% - 32px));
+    padding-top: 20px;
+  }
+
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .participants {
+    grid-template-columns: 1fr;
+    width: min(720px, calc(100% - 32px));
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    justify-content: space-between;
+    gap: 10px;
+    min-height: 74px;
+    padding: 10px 14px;
+  }
+
+  .logo-link img {
+    width: 88px;
+  }
+
+  .convem-logo {
+    width: 54px;
+  }
+
+  .honda-mark {
+    font-size: 1rem;
+  }
+
+  .hero {
+    width: calc(100% - 24px);
+    gap: 18px;
+  }
+
+  .hero-media,
+  .hero-image {
+    min-height: 220px;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 12vw, 3.1rem);
+  }
+
+  .form-panel {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .field-row,
+  .participants ul {
+    grid-template-columns: 1fr;
+  }
+
+  input,
+  select,
+  .choice span {
+    min-height: 52px;
+  }
+
+  button,
+  .whatsapp-button {
+    min-height: 58px;
+  }
+
+  .participants {
+    width: calc(100% - 24px);
+    padding: 34px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 1ms !important;
+    transition-duration: 1ms !important;
+  }
+}
