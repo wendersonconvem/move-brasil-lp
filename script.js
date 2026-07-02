@@ -52,6 +52,16 @@ function createWhatsAppUrl(lead) {
 function createWebhookBody(lead) {
   return {
     ...lead,
+    trabalhaComApp: lead.apps,
+    trabalha_com_app: lead.apps,
+    trabalhaComAplicativos: lead.apps,
+    trabalha_com_aplicativos: lead.apps,
+    trabalhaAplicativos: lead.apps,
+    aplicativos: lead.apps,
+    "Trabalha com app": lead.apps,
+    "Você trabalha com aplicativos?": lead.apps,
+    motoDesejada: lead.modelo,
+    modeloDesejado: lead.modelo,
     origem: "Landing Page Programa MOVE BRASIL",
     enviadoEm: new Date().toISOString(),
   };

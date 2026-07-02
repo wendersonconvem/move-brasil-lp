@@ -39,5 +39,6 @@ por Apps Script que lê `JSON.parse(e.postData.contents)`.
 - `script.js`: validação, envio para Google Sheets e WhatsApp.
 - `images/`: imagens usadas pela LP.
 
-Quando o logo oficial da Honda estiver disponível, adicione-o em `images/` e
-substitua o texto `HONDA` em `index.html` por uma imagem.
+O `script.js` envia aliases para o campo de aplicativo, incluindo
+`trabalhaComApp`, `trabalha_com_app` e `Trabalha com app`, para evitar coluna
+em branco no Google Sheets.
