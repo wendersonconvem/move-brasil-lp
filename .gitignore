@@ -1,0 +1,45 @@
+# Dependencies and framework artifacts
+node_modules/
+public/
+.next/
+dist/
+out/
+.wrangler/
+.openai/
+.agents/
+GIT/
+GitHub/
+app/
+build/
+db/
+drizzle/
+examples/
+worker/
+package.json
+package-lock.json
+next.config.ts
+vite.config.ts
+tsconfig.json
+postcss.config.mjs
+eslint.config.mjs
+drizzle.config.ts
+*.tsbuildinfo
+
+# Local environment
+.env
+.env.*
+
+# Logs and temporary files
+*.log
+dev-server*.log
+_tmp_*
+.static-server.pid
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
+# Original source images copied into public/
+/MOVE BRASIL.png
+/IMAGEM MOTOQUEIRO.png
+/convem.png

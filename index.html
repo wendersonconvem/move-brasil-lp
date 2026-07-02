@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Programa MOVE BRASIL | Conquiste sua Honda 0 km</title>
+    <meta
+      name="description"
+      content="Conquiste sua Honda 0 km com Entrada Zero através do Programa MOVE BRASIL. Preencha seus dados e fale com nossa equipe pelo WhatsApp."
+    />
+    <meta name="theme-color" content="#e40521" />
+    <meta property="og:title" content="Programa MOVE BRASIL | Conquiste sua Honda 0 km" />
+    <meta
+      property="og:description"
+      content="Conquiste sua Honda 0 km com Entrada Zero através do Programa MOVE BRASIL."
+    />
+    <meta property="og:image" content="images/motociclista-honda.png" />
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar" aria-label="Logos do Programa MOVE BRASIL">
+      <a class="logo-link" href="#formulario" aria-label="MOVE BRASIL">
+        <img src="images/logo-move-brasil.png" alt="MOVE BRASIL" width="150" height="96" />
+      </a>
+      <div class="honda-mark" aria-label="Honda">HONDA</div>
+      <img class="convem-logo" src="images/logo-convem.png" alt="CONVEM" width="142" height="142" />
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media reveal">
+          <img
+            class="hero-image"
+            src="images/motociclista-honda.png"
+            alt="Motociclista de aplicativo usando motocicleta vermelha"
+            width="1456"
+            height="970"
+            fetchpriority="high"
+          />
+        </div>
+
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Programa MOVE BRASIL</p>
+          <h1 id="hero-title">
+            Conquiste sua Honda 0 km com Entrada Zero através do Programa MOVE BRASIL.
+          </h1>
+          <p class="subheadline">
+            Se você trabalha com entregas ou aplicativos utilizando motocicleta e possui CNH
+            categoria A, aproveite as condições exclusivas enquanto o programa estiver disponível.
+          </p>
+
+          <div class="benefits" aria-label="Principais benefícios">
+            <span class="benefit-card"><strong aria-hidden="true">✓</strong>Entrada Zero</span>
+            <span class="benefit-card">
+              <strong aria-hidden="true">✓</strong>Condições exclusivas para motociclistas de app
+            </span>
+            <span class="benefit-card">
+              <strong aria-hidden="true">✓</strong>Atendimento rápido pelo WhatsApp
+            </span>
+          </div>
+        </div>
+
+        <section class="form-panel reveal" id="formulario" aria-label="Formulário de cadastro">
+          <form id="lead-form" novalidate>
+            <h2>Preencha seus dados e verifique sua elegibilidade</h2>
+
+            <label>
+              Nome
+              <input name="nome" autocomplete="name" required />
+            </label>
+
+            <label>
+              WhatsApp
+              <input name="whatsapp" type="tel" inputmode="tel" autocomplete="tel" required />
+            </label>
+
+            <div class="field-row">
+              <label>
+                Cidade
+                <input name="cidade" autocomplete="address-level2" required />
+              </label>
+              <label>
+                Estado
+                <input name="estado" maxlength="2" autocomplete="address-level1" required />
+              </label>
+            </div>
+
+            <fieldset>
+              <legend>Possui CNH categoria A?</legend>
+              <div class="choice-row">
+                <label class="choice">
+                  <input type="radio" name="cnh" value="Sim" required />
+                  <span>Sim</span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="cnh" value="Não" required />
+                  <span>Não</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Você trabalha com aplicativos?</legend>
+              <div class="choice-row">
+                <label class="choice">
+                  <input type="radio" name="apps" value="Sim" required />
+                  <span>Sim</span>
+                </label>
+                <label class="choice">
+                  <input type="radio" name="apps" value="Não" required />
+                  <span>Não</span>
+                </label>
+              </div>
+            </fieldset>
+
+            <label>
+              Modelo desejado
+              <select name="modelo" required>
+                <option value="">Selecione</option>
+                <option>POP</option>
+                <option>BIZ</option>
+                <option>CG 160 Start</option>
+                <option>CG 160 Fan</option>
+              </select>
+            </label>
+
+            <p class="form-error" id="form-error" role="alert" hidden></p>
+            <button type="submit" id="submit-button">Quero minha Honda</button>
+          </form>
+
+          <div class="success-box" id="success-box" role="status" hidden>
+            <span class="success-icon" aria-hidden="true">✓</span>
+            <h2>Cadastro realizado com sucesso!</h2>
+            <p>Agora clique no botão abaixo para continuar seu atendimento pelo WhatsApp.</p>
+            <a class="whatsapp-button" id="whatsapp-button" href="#" target="_blank" rel="noopener">
+              Continuar no WhatsApp
+            </a>
+          </div>
+
+          <aside class="trust-card reveal" aria-labelledby="trust-title">
+            <h3 id="trust-title">Cadastro gratuito e sem compromisso</h3>
+            <div class="trust-list">
+              <span><strong aria-hidden="true">✓</strong>Cadastro 100% gratuito</span>
+              <span><strong aria-hidden="true">✓</strong>Atendimento rápido via WhatsApp</span>
+              <span>
+                <strong aria-hidden="true">✓</strong>Condições exclusivas do Programa MOVE BRASIL
+              </span>
+            </div>
+          </aside>
+        </section>
+      </section>
+
+      <section class="participants reveal" aria-labelledby="participants-title">
+        <div>
+          <p class="eyebrow">Elegibilidade</p>
+          <h2 id="participants-title">Quem pode participar?</h2>
+        </div>
+        <ul>
+          <li>Entregadores</li>
+          <li>Motociclistas que trabalham com aplicativos</li>
+          <li>Pessoas que possuem CNH categoria A</li>
+          <li>Interessados em adquirir uma Honda 0 km através do programa</li>
+        </ul>
+      </section>
+
+      <section class="urgency" aria-label="Disponibilidade do programa">
+        As condições especiais são válidas enquanto o Programa MOVE BRASIL estiver disponível.
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-logos" aria-label="Logos">
+        <img src="images/logo-move-brasil.png" alt="MOVE BRASIL" width="112" height="72" loading="lazy" />
+        <span class="honda-mark footer-honda" aria-label="Honda">HONDA</span>
+        <img src="images/logo-convem.png" alt="CONVEM" width="96" height="96" loading="lazy" />
+      </div>
+      <p>Programa sujeito aos critérios e disponibilidade vigentes.</p>
+    </footer>
+  </body>
+</html>
