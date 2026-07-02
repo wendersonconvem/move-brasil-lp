@@ -48,9 +48,9 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(14px, 3vw, 40px);
-  min-height: 42px;
-  padding: 4px clamp(14px, 3vw, 44px);
+  gap: clamp(10px, 2vw, 22px);
+  min-height: 22px;
+  padding: 1px clamp(10px, 2vw, 28px);
   border-bottom: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.96);
   position: sticky;
@@ -69,19 +69,28 @@ main {
 }
 
 .logo-link img {
-  width: clamp(58px, 8vw, 88px);
+  width: clamp(34px, 4.8vw, 48px);
 }
 
 .convem-logo {
-  width: clamp(38px, 5vw, 52px);
-  border-radius: 8px;
+  width: clamp(28px, 3.5vw, 34px);
+  border-radius: 6px;
 }
 
 .honda-logo {
-  width: clamp(72px, 9vw, 104px);
+  width: clamp(48px, 5.5vw, 64px);
   height: auto;
   object-fit: contain;
   display: block;
+}
+
+.header-alert {
+  background: var(--honda-red);
+  color: var(--white);
+  padding: 8px 16px;
+  text-align: center;
+  font-size: clamp(0.86rem, 1.25vw, 1rem);
+  font-weight: 900;
 }
 
 .hero {
@@ -542,20 +551,26 @@ footer p {
   .topbar {
     justify-content: space-between;
     gap: 8px;
-    min-height: 38px;
-    padding: 4px 12px;
+    min-height: 26px;
+    padding: 1px 10px;
   }
 
   .logo-link img {
-    width: 58px;
-  }
-
-  .convem-logo {
     width: 38px;
   }
 
+  .convem-logo {
+    width: 28px;
+  }
+
   .honda-logo {
-    width: 70px;
+    width: 50px;
+  }
+
+  .header-alert {
+    padding: 7px 12px;
+    font-size: 0.82rem;
+    line-height: 1.25;
   }
 
   .hero {
